@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Solar Power Calculate</title>
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,700,700i|Montserrat:300,400,500,700"
+    rel="stylesheet">
+
+  <!-- Bootstrap CSS File -->
+  <link href="lib/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Libraries CSS Files -->
+  <link href="lib/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+  <link href="lib/animate/animate.min.css" rel="stylesheet">
+  <link href="lib/ionicons/css/ionicons.min.css" rel="stylesheet">
+  <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+  <link href="lib/lightbox/css/lightbox.min.css" rel="stylesheet">
+
+  <!-- Main Stylesheet File -->
+  <link href="css/style.css" rel="stylesheet">
+  <script src="js/calculate.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-NY4FDGXTHR"></script>
+
+</head>
+
+<body>
+
+  <header id="header">
+      <nav id="nav-menu-container">
+        <ul class="nav-menu">
+          <li><a href="#">Home</a></li>
+          <li><a href="#">Services</a></li>
+          <li><a href="#">Calculate</a></li>
+          <li><a href="#">Projects</a></li>
+          <li><a href="#">Contact</a></li>
+          <li><a href="#">News</a></li>
+        </ul>
+      </nav><!-- #nav-menu-container -->
+    </div>
+  </header><!-- #header -->
+
+
+  <main id="main">
+
+    <section id="calculate" class="section-bg wow fadeInUp">
+      <div class="container">
+        <header class="section-header">
+          <h3 class="section-title"> Solar Power Calculate</h3>
+        </header>
+
+        <form class="calculator">
+            <div class="calculator_row">
+              <h2 class="row_title" id="row_title">Select Subscriber Type</h2>
+                <div class="columns">
+                  <div class="col1">
+                    <i class="fa-solid fa-house fa-2x"></i>
+                    <span class="columns_txt">House</span>
+                    <input type="radio" class="sub_radio" name="radio_sub" id="radio_house" onchange="Bill()" required>
+                  </div>
+                  <div class="col2">
+                    <i class="fa-solid fa-building fa-2x"></i>
+                    <span class="columns_txt">Workplace</span>
+                    <input type="radio" class="sub_radio" name="radio_sub" id="radio_work" onchange="Bill()" required>
+                  </div>
+                  <div class="col3">
+                    <i class="fa-solid fa-industry fa-2x"></i>
+                    <span class="columns_txt">Industry</span>
+                    <input type="radio" class="sub_radio" name="radio_sub" id="radio_industry" onchange="Bill()" required> 
+                  </div>
+                </div>
+            </div>
+              <div class="calculator2">
+                <div class="calculator_row">
+                  <h2 class="row_title">Select Installation Site</h2>
+                  <div class="columns">
+                    <div class="col1">
+                      <i class="fa-solid fa-people-roof fa-2x"></i>
+                      <span class="columns_txt">Roof</span>
+                      <input type="radio" class="sub_radio" name="radio_area" id="radio_roof" onchange="Bill()" required>
+                    </div>
+                    <div class="col2">
+                      <i class="fa-solid fa-mountain-sun fa-2x"></i>
+                      <span class="columns_txt">Land</span>
+                      <input type="radio" class="sub_radio" name="radio_area" id="radio_land" onchange="Bill()" required>
+                    </div>
+                  </div>
+                </div>
+                <div class="calculator_row">
+                  <h2 class="row_title">Enter Roof or Land Area</h2>
+                  <div class="area">
+                    <input type="text" id="area_txtbox" maxlength="7" class="bill" onchange="Bill()" required>
+                    <label class="bill" id="label_m2">M&sup2;</label>
+                  </div>
+                  
+                </div>
+              </div>
+              <div class="calculator2">
+                <div class="calculator_row">
+                  <h2 class="row_title">Select Your City</h2>
+                  <select name="cities" id="cities" class="bill" onchange="Bill()" required>
+                    <option disabled selected value>Select City...</option>
+                    <option value="2953">Adana</option>
+                    <option value="2961">Adıyaman</option>
+                    <option value="2705">Afyonkarahisar</option>
+                    <option value="2778">Ağrı</option>
+                    <option value="2886">Aksaray</option>
+                    <option value="2427">Amasya</option>
+                    <option value="2611">Ankara</option>
+                    <option value="3011">Antalya</option>
+                    <option value="2310">Ardahan</option>
+                    <option value="2124">Artvin</option>
+                    <option value="3011">Aydın</option>
+                    <option value="2686">Balıkesir</option>
+                    <option value="2376">Bartın</option>
+                    <option value="2873">Batman</option>
+                    <option value="2398">Bayburt</option>
+                    <option value="2424">Bilecik</option>
+                    <option value="2719">Bingöl</option>
+                    <option value="2692">Bitlis</option>
+                    <option value="2402">Bolu</option>
+                    <option value="2944">Burdur</option>
+                    <option value="2515">Bursa</option>
+                    <option value="2807">Çanakkale</option>
+                    <option value="2514">Çankırı</option>
+                    <option value="2511">Çorum</option>
+                    <option value="2931">Denizli</option>
+                    <option value="2613">Diyarbakır</option>
+                    <option value="2362">Düzce</option>
+                    <option value="2697">Edirne</option>
+                    <option value="2829">Elazığ </option>
+                    <option value="2595">Erzincan</option>
+                    <option value="2504">Erzurum</option>
+                    <option value="2479">Eskişehir</option>
+                    <option value="2978">Gaziantep</option>
+                    <option value="2285">Giresun</option>
+                    <option value="2349">Gümüşhane</option>
+                    <option value="3508">Hakkari</option>
+                    <option value="2997">Hatay</option>
+                    <option value="3340">Iğdır</option>
+                    <option value="2858">Isparta</option>
+                    <option value="2446">İstanbul</option>
+                    <option value="2986">İzmir</option>
+                    <option value="2913">Kahramanmaraş</option>
+                    <option value="2402">Karabük</option>
+                    <option value="3007">Karaman</option>
+                    <option value="2537">Kars</option>
+                    <option value="2394">Kastamonu</option>
+                    <option value="2842">Kayseri</option>
+                    <option value="2648">Kırıkkale</option>
+                    <option value="2628">Kırklareli</option>
+                    <option value="2769">Kırşehir</option>
+                    <option value="2975">Kilis</option>
+                    <option value="2373">Kocaeli</option>
+                    <option value="2898">Konya</option>
+                    <option value="2559">Kütahya</option>
+                    <option value="2873">Malatya</option>
+                    <option value="2840">Manisa</option>
+                    <option value="3003">Mardin</option>
+                    <option value="3015">Mersin</option>
+                    <option value="3040">Muğla</option>
+                    <option value="2686">Muş</option>
+                    <option value="2834">Nevşehir</option>
+                    <option value="2930">Niğde</option>
+                    <option value="2263">Ordu</option>
+                    <option value="2954">Osmaniye</option>
+                    <option value="2124">Rize</option>
+                    <option value="2358">Sakarya</option>
+                    <option value="2314">Samsun</option>
+                    <option value="2828">Siirt</option>
+                    <option value="2347">Sinop</option>
+                    <option value="2653">Sivas</option>
+                    <option value="3003">Şanlıurfa</option>
+                    <option value="2975">Şırnak</option>
+                    <option value="2606">Tekirdağ</option>
+                    <option value="2464">Tokat</option>
+                    <option value="2132">Trabzon</option>
+                    <option value="2716">Tunceli</option>
+                    <option value="2789">Uşak</option>             
+                    <option value="3070">Van</option>   
+                    <option value="2424">Yalova</option>   
+                    <option value="2683">Yozgat</option>   
+                    <option value="2380">Zonguldak</option>    
+                  </select>
+                </div>
+                <div class="calculator_row">
+                  <h2 class="row_title">Enter Electricity Bill Amount</h2>
+                  <input style="width: 50%;" type="range" min="0" max="20000" value="0" step="100" id="bill" class="bill" onchange="Bill()" 
+                  oninput="x.value = bill.value" required>
+                  <div class="bill">
+                    <output style="color: rgb(255, 255, 255);" id="bill_out" name="x">0</output>
+                    <i class="fa-solid fa-turkish-lira-sign" style="color: rgb(255, 255, 255);"></i>
+                  </div>
+                </div>
+              </div>
+              <div class="calculator_btn" id="calc_btn_id">
+                  <a class="cta-btn" href="#result" id="calc_btn" onclick="Calculate()">Click to calculate...</a>                           
+              </div>
+        </form>
+        </div>
+    </section>
+
+    <!--==========================
+      Result Section
+    ============================-->
+
+    <section id="result" class="section-bg">
+      <div class="container">
+        <header class="section-header">
+          <h3 class="section-title">Calculation Results</h3>
+        </header>
+
+        <form class="calculator">
+            <div class="calculator2">
+              <div class="calculator_row">
+                <h2 class="row_title">Installed Power</h2>
+                <span class="calculator__result" id="power"></span>                
+              </div>
+              <div class="calculator_row">
+                <h2 class="row_title">Number of Panels</h2>
+                <span class="calculator__result" id="panel_count"></span>                              
+              </div>
+            </div>
+              <div class="calculator2">
+                <div class="calculator_row">
+                  <h2 class="row_title">Annual Electricity Production</h2>
+                  <span class="calculator__result" id="electric_gen"></span>                 
+                </div>
+                <div class="calculator_row">
+                  <h2 class="row_title">Annual Electricity Consumption</h2>  
+                  <span class="calculator__result" id="electric_cons"></span>                            
+                </div>
+              </div>
+              <div class="calculator2">
+                <div class="calculator_row">
+                  <h2 class="row_title">Number of Trees Recovered</h2>   
+                  <span class="calculator__result" id="saves_tree"></span>        
+                </div>
+                <div class="calculator_row">
+                  <h2 class="row_title">Carbon Emission</h2>   
+                  <span class="calculator__result" id="co2" data-toggle="counter-up"></span>              
+                </div>
+              </div>
+              <div class="calculator_btn">
+                <a class="cta-btn" href="#"> Click to make a new calculation</a>
+              </div>
+        </form>
+        </div>
+    </section>
+
+  <!--==========================
+    Footer
+  ============================-->
+  <footer id="footer">
+    <div class="container">
+      <div class="copyright">
+        &copy; Copyright <a href="https://www.linkedin.com/in/melih-arslankaya/" target="_blank">Melih Arslankaya.</a> All Rights Reserved.
+      </div>
+    </div>
+  </footer><!-- #footer -->
+
+  <!-- JavaScript Libraries -->
+  <script src="lib/jquery/jquery.min.js"></script>
+  <script src="lib/jquery/jquery-migrate.min.js"></script>
+  <script src="lib/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="lib/easing/easing.min.js"></script>
+  <script src="lib/superfish/hoverIntent.js"></script>
+  <script src="lib/superfish/superfish.min.js"></script>
+  <script src="lib/wow/wow.min.js"></script>
+  <script src="lib/waypoints/waypoints.min.js"></script>
+  <script src="lib/counterup/counterup.min.js"></script>
+  <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+  <script src="lib/isotope/isotope.pkgd.min.js"></script>
+  <script src="lib/lightbox/js/lightbox.min.js"></script>
+  <script src="lib/touchSwipe/jquery.touchSwipe.min.js"></script>
+
+</body>
+
+</html>
